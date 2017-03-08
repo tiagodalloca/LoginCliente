@@ -21,29 +21,37 @@ import javafx.scene.control.TextField;
  * @author u15194
  */
 public class FXMLDocumentController implements Initializable {
-    
-    @FXML
-    private TextField txtUsuario;    
-    @FXML
-    private PasswordField pssSenha;
-    
-    @FXML
-    public void handleBtnLoginAction(ActionEvent e){
-        String user = txtUsuario.getText();
-        String pass = pssSenha.getText();
-        
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Importante!");
-        alert.setHeaderText("Sua senha:");
-        alert.setContentText(pass);
 
-        alert.showAndWait();
+	@FXML
+	private TextField txtUsuario;
+	@FXML
+	private PasswordField pssSenha;
 
-    }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+	@FXML
+	public void handleBtnLoginAction(ActionEvent e) {
+		String user = txtUsuario.getText();
+		String pass = pssSenha.getText();
+
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("Importante!");
+		alert.setHeaderText("Resulatado da operação");
+		
+		if (logar(user, pass)) {
+			alert.setContentText(pass);
+		} else {
+			alert.setContentText("Não logou");
+		}
+
+		alert.showAndWait();
+	}
+	
+	public boolean logar (String user, String password){
+		return true;
+	}
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		// TODO
+	}
+
 }
