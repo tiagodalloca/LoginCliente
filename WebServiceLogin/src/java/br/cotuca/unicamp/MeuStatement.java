@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package praticajava;
+package br.cotuca.unicamp;
+
 import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -368,7 +364,7 @@ public class MeuStatement implements Statement
         return ret;
     }
 
-    // O metodo compareTo, que é, por vezes, obrigatorio, nao esta
+    // O metodo compareTo, que �, por vezes, obrigatorio, nao esta
     // sendo implementado porque, tendo dois objetos instanciados
     // desta classe, nao faria sentido pensar em qual deles eh o
     // maior ou em qual deles eh o menor.

@@ -19,3 +19,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/WebServiceLogin/nbproject/private/
