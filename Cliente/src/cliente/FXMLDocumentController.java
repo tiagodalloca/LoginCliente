@@ -37,7 +37,7 @@ public class FXMLDocumentController implements Initializable {
 		alert.setHeaderText("Resulatado da operação");
 		
 		if (logar(user, pass)) {
-			alert.setContentText(pass);
+			alert.setContentText("Aee!!! Parabéns Simone, você logou!");
 		} else {
 			alert.setContentText("Não logou");
 		}
