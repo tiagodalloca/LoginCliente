@@ -46,7 +46,7 @@ public class FXMLDocumentController implements Initializable {
 	}
 	
 	public boolean logar (String user, String password){
-		return true;
+		return verificaLogin(user, password);
 	}
 
 	@Override
@@ -54,4 +54,9 @@ public class FXMLDocumentController implements Initializable {
 		// TODO
 	}
 
+	private static Boolean verificaLogin(java.lang.String nomeUsuario, java.lang.String senhaUsuario) {
+		br.cotuca.unicamp.ServiceLogin_Service service = new br.cotuca.unicamp.ServiceLogin_Service();
+		br.cotuca.unicamp.ServiceLogin port = service.getServiceLoginPort();
+		return port.verificaLogin(nomeUsuario, senhaUsuario);
+	}
 }
